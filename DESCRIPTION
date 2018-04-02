@@ -17,7 +17,7 @@ Description: 'CIRCL' 'Passive DNS' <https://www.circl.lu/services/passive-dns/> 
 URL: https://github.com/hrbrmstr/rpdns
 BugReports: https://github.com/hrbrmstr/rpdns/issues
 Encoding: UTF-8
-License: AGPL
+License: MIT + file LICENSE
 Suggests:
     testthat,
     covr
