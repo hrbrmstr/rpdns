@@ -1,0 +1,30 @@
+Package: rpdns
+Type: Package
+Title: Query 'CIRCL' Passive 'DNS' 'API'
+Version: 0.1.0
+Date: 2018-04-01
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640")),
+    person("Michael", "schratt", role = c("aut"),
+           comment = "Author/creator of core idiom used in the package.")
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: 'CIRCL' 'Passive DNS' <https://www.circl.lu/services/passive-dns/> is a 
+    database storing historical 'DNS' records from various resources including malware 
+    analysis or partners. The 'DNS' historical data is indexed, which makes it searchable 
+    for incident handlers, security analysts or researchers.
+URL: https://github.com/hrbrmstr/rpdns
+BugReports: https://github.com/hrbrmstr/rpdns/issues
+Encoding: UTF-8
+License: AGPL
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    jsonlite,
+    httpcache,
+    httr
+RoxygenNote: 6.0.1.9000
