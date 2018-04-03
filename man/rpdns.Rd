@@ -11,6 +11,13 @@ database storing historical 'DNS' records from various resources including malwa
 analysis or partners. The 'DNS' historical data is indexed, which makes it searchable
 for incident handlers, security analysts or researchers.
 }
+\details{
+It is highly suggested that your CIRCL username and password be stored in
+\code{CIRCL_USER} and \code{CIRCL_PASSWORD} (respectively) for the most efficient and secure
+use of this package.
+
+Output follows the \href{https://datatracker.ietf.org/doc/draft-dulaunoy-dnsop-passive-dns-cof/}{Passive DNS - Common Output Format}.
+}
 \author{
 Bob Rudis (bob@rud.is)
 }

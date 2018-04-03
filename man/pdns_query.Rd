@@ -7,13 +7,13 @@
 \usage{
 pdns_query(domain, circl_user = Sys.getenv("CIRCL_USER"),
   circl_password = Sys.getenv("CIRCL_PASSWORD"), use_proxy,
-  circl_pdns_service_url = "https://www.circl.lu/pdns/query/",
-  enable_cache = FALSE)
+  circl_pdns_service_url = "https://www.circl.lu/pdns/query",
+  enable_cache = FALSE, timeout = 10)
 
 pdns.query(domain, circl_user = Sys.getenv("CIRCL_USER"),
   circl_password = Sys.getenv("CIRCL_PASSWORD"), use_proxy,
-  circl_pdns_service_url = "https://www.circl.lu/pdns/query/",
-  enable_cache = FALSE)
+  circl_pdns_service_url = "https://www.circl.lu/pdns/query",
+  enable_cache = FALSE, timeout = 10)
 }
 \arguments{
 \item{domain}{host/domain name to query}
@@ -27,9 +27,16 @@ that these be stored in environment variables (see parameters for which ones).}
 \item{circl_pdns_service_url}{<circl.lu> passive DNS service URL}
 
 \item{enable_cache}{switch API result caching on / off}
+
+\item{timeout}{request timeout (seconds); Default: 10s}
 }
 \description{
 Given a domain name this will return a data frame consisting of passive DNS entries.
+}
+\details{
+It is highly suggested that your CIRCL username and password be stored in
+\code{CIRCL_USER} and \code{CIRCL_PASSWORD} (respectively) for the most efficient and secure
+use of this package.
 }
 \section{TODO}{
 
@@ -39,6 +46,13 @@ Given a domain name this will return a data frame consisting of passive DNS entr
 }
 }
 
+\examples{
+\dontrun{
+pdns_query("www.microsoft.com")
+pdns_query("www.circl.lu")
+}
+}
 \references{
-CIRCL.LU's \href{https://github.com/CIRCL/PyPDNS}{PyPDNS Python module}
+CIRCL.LU's \href{https://github.com/CIRCL/PyPDNS}{PyPDNS Python module};
+\href{https://www.circl.lu/services/passive-dns/}{CIRCL Passive DNS API}.
 }

@@ -1,5 +1,7 @@
 ---
 output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 # rpdns
@@ -8,9 +10,11 @@ Query 'CIRCL' Passive 'DNS' 'API'
 
 ## Description
 
-'CIRCL' 'Passive DNS' <https://www.circl.lu/services/passive-dns/> is a 
-database storing historical 'DNS' records from various resources including malware 
-analysis or partners. The 'DNS' historical data is indexed, which makes it searchable for incident handlers, security analysts or researchers.
+'CIRCL' 'Passive DNS' <https://www.circl.lu/services/passive-dns/> is a database storing historical 'DNS' records from various resources including malware  analysis or partners. The 'DNS' historical data is indexed, which makes it searchable for incident handlers, security analysts or researchers.
+
+It is highly suggested that your CIRCL username and password be stored in `CIRCL_USER` and `CIRCL_PASSWORD` (respectively) for the most efficient and secure use of this package.
+
+Output follows the [Passive DNS - Common Output Format](https://datatracker.ietf.org/doc/draft-dulaunoy-dnsop-passive-dns-cof/).
 
 This is a "package"-ized version of @michaelschratt's [script](https://github.com/michaelschratt/rpdns).
     
@@ -38,6 +42,10 @@ library(rpdns)
 
 # current verison
 packageVersion("rpdns")
-
 ```
 
+```{r message=FALSE, warning=FALSE, error=FALSE}
+pdns_query("www.microsoft.com")
+
+pdns_query("www.circl.lu")
+```
