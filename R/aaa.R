@@ -1,1 +1,1 @@
-RPDNS_USER_AGENT <- "#rstqats rpdns 0.1.0. / <https://github.com/michaelschratt/rpdns>"
+RPDNS_USER_AGENT <- "#rstats rpdns 0.1.0. / <https://sr.ht/~hrbrmstr/rpdns>"
